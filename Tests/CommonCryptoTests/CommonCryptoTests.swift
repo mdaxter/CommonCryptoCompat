@@ -38,11 +38,17 @@ final class CommonCryptoTests: XCTestCase {
 		XCTAssertEqual(generateRandomBytes(count: 64).count, 64)
 	}
 
+	func testLength() {
+		let algorithm = HMAC.Algorithm.SHA512
+		XCTAssertEqual(algorithm.length, Int(CC_SHA512_DIGEST_LENGTH))
+	}
+
     static var allTests : [(String, (CommonCryptoTests) -> () throws -> Void)] {
         return [
             ("testDigest",					testDigest),
             ("testHMACCommonCryptoSHA1",	testHMACCommonCryptoSHA1),
             ("testRandom",					testRandom),
+            ("testLength",					testLength),
         ]
     }
 }

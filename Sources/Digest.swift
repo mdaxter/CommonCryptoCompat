@@ -10,6 +10,8 @@ import CryptoSwift
 
 public let CC_MD5_DIGEST_LENGTH: CInt = 16
 public let CC_SHA1_DIGEST_LENGTH: CInt = 20
+public let CC_SHA256_DIGEST_LENGTH: CInt = 32
+public let CC_SHA384_DIGEST_LENGTH: CInt = 48
 public let CC_SHA512_DIGEST_LENGTH: CInt = 64
 
 public enum Digest {
